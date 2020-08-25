@@ -1,0 +1,15 @@
+applications:
+- name: dashboard-CRUD-mongo
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: target\dashboard-Mongo-0.0.1-SNAPSHOT.jar
+  timeout: 120
+  services:
+  - dashboard-mongodb
+  buildpacks: 
+  - https://github.com/cloudfoundry/java-buildpack.git
+  routes:
+  - route: dashboard-mongo-surprised-bonobo-101-id.cfapps.io
+  stack: cflinuxfs3
+  
